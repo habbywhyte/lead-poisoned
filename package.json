@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "react-native-parallax-scroll-view": "^0.18.2"
   },
   "devDependencies": {
     "babel-core": "^6.9.0",

@@ -1,5 +1,5 @@
-var HtmlWebPackPlugin = require('html-webpack-plugin');
-var HtmlWebPackPluginConfig = new HtmlWebPackPlugin({
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebPackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + "/app/index.html",
   filename: "index.html",
   inject: "body"
@@ -16,8 +16,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.js$/,
+      {test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       }
@@ -26,4 +25,4 @@ module.exports = {
   plugins: [
     HtmlWebPackPluginConfig
   ]
-}
+};
