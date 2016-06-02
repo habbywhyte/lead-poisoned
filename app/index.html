@@ -2,9 +2,58 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Water Vitals</title>
+    <title>Water Watch</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="node_modules/datamaps/dist/datamaps.world.min.js"></script>
+
+    <script>
+        var map = new Datamap({
+          element: document.getElementById('container'),
+          scope: 'usa'
+        });
+
+    </script>
+    <style>
+    body{
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    h1{
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 40px;
+      color: #fff;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .header {
+      background: url(/images/Tap-water-1.jpg) center 80%;
+      background-size: cover;
+      margin-bottom: 50px;
+      transition: 0.5s ease all;
+      &.blurred { filter: blur(2px);}
+    }
+    .header h2, h3 {
+      color: #00688B;
+    }
+    .callout.primary{
+      background: none;
+    }
+    .callout.large{
+      padding: 9em 3em 7em;
+    }
+    .callout{
+      background-color: #333;
+    }
+    </style>
   </head>
   <body>
+    <div id="parallax"></div>
     <div id="app"></div>
+    <div id="container" style="position: relative; width: 500px; height: 300px;"></div>
+
   </body>
 </html>
